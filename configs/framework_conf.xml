@@ -1,0 +1,39 @@
+<framework>
+    <execution>
+        <maxThreadCount>1</maxThreadCount>
+        <clock enabled="true" unit="hz">100</clock>
+        <configMonitor>true</configMonitor>
+        <profiling enabled="true" />
+    </execution>
+    <modulesToEnable>
+        <module>importer_1</module>
+        <module>importer_2</module>
+        <module>transformer</module>
+        <module>fusion</module>
+        <module>modifier</module>
+    </modulesToEnable>
+
+    <module>
+        <name>importer_1</name>
+        <config>
+        	<test>3</test>
+        </config>
+    </module>
+
+    <module>
+        <name>importer_2</name>
+    </module>
+
+    <module>
+        <name>transformer</name>
+    </module>
+
+    <module>
+        <name>fusion</name>
+    </module>
+
+    <module>
+        <name>modifier</name>
+        <writePriority>-5</writePriority>
+    </module>
+</framework>
