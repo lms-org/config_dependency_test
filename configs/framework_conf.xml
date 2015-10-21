@@ -8,6 +8,9 @@
         <module>transformer</module>
         <module>fusion</module>
         <module>modifier</module>
+        <module>reader</module>
+        <!--module>reader_2</module-->
+        <module>early_reader</module>
     </modulesToEnable>
 
     <module>
@@ -32,5 +35,22 @@
     <module>
         <name>modifier</name>
         <channelMapping from="FUSION" to="FUSION" priority="-5" />
+    </module>
+
+    <module>
+        <name>reader</name>
+        <channelMapping from="FUSION" to="FUSION" priority="-5" />
+    </module>
+
+    <module>
+        <name>reader_2</name>
+        <realName>reader</realName>
+        <channelMapping from="FUSION" to="FUSION" priority="-5" />
+    </module>
+
+    <module>
+        <name>early_reader</name>
+        <realName>reader</realName>
+        <channelMapping from="FUSION" to="FUSION" priority="-2" />
     </module>
 </framework>
