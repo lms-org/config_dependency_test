@@ -3,4 +3,4 @@ set(FILES
 	transformer.h)
 
 add_library(transformer MODULE ${FILES})
-target_link_libraries(transformer PRIVATE lms)
+target_link_libraries(transformer PRIVATE lmscore)

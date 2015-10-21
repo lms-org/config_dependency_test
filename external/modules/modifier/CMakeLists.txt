@@ -3,4 +3,4 @@ set(FILES
 	modifier.h)
 
 add_library(modifier MODULE ${FILES})
-target_link_libraries(modifier PRIVATE lms)
+target_link_libraries(modifier PRIVATE lmscore)
