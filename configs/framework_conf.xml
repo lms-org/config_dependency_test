@@ -1,9 +1,6 @@
 <framework>
     <execution>
-        <maxThreadCount>1</maxThreadCount>
-        <clock enabled="true" unit="hz">100</clock>
-        <configMonitor>true</configMonitor>
-        <profiling enabled="true" />
+        <clock enabled="true" unit="hz" value="100" />
     </execution>
     <modulesToEnable>
         <module>importer_1</module>
@@ -34,6 +31,6 @@
 
     <module>
         <name>modifier</name>
-        <writePriority>-5</writePriority>
+        <channelMapping from="FUSION" to="FUSION" priority="-5" />
     </module>
 </framework>
