@@ -1,14 +1,10 @@
 #include "transformer.h"
 
-extern "C" {
-void* getInstance () {
-    return new Transformer();
-}
-}
+LMS_MODULE_INTERFACE(Transformer)
 
 bool Transformer::initialize() {
-    ptrIn = datamanager()->readChannel<int>(this, "IMPORT_1");
-    ptrOut = datamanager()->writeChannel<int>(this, "TRANSFORM_1");
+    ptrIn = readChannel<int>("IMPORT_1");
+    ptrOut = writeChannel<int>("TRANSFORM_1");
 
     return true;
 }

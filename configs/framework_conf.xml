@@ -1,6 +1,7 @@
 <framework>
     <execution>
         <clock enabled="true" unit="hz" value="100" />
+        <executionType>NEVER_MAIN_THREAD</executionType>
     </execution>
     <modulesToEnable>
         <module>importer_1</module>
@@ -16,7 +17,7 @@
     <module>
         <name>importer_1</name>
         <config>
-        	<test>3</test>
+            <test>12</test>
         </config>
     </module>
 
@@ -53,4 +54,14 @@
         <realName>reader</realName>
         <channelMapping from="FUSION" to="FUSION" priority="-2" />
     </module>
+
+    <service>
+        <name>test_service</name>
+        <config>
+            <test>134</test>
+        </config>
+    </service>
+
+    <!--<runtime name="render" src="render.xml" />
+    <runtime name="rendering" src="render.xml" />-->
 </framework>

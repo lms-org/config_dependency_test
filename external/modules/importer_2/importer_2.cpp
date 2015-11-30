@@ -1,13 +1,9 @@
 #include "importer_2.h"
 
-extern "C" {
-void* getInstance () {
-    return new Importer2();
-}
-}
+LMS_MODULE_INTERFACE(Importer2)
 
 bool Importer2::initialize() {
-    ptr = datamanager()->writeChannel<int>(this, "IMPORT_2");
+    ptr = writeChannel<int>("IMPORT_2");
 
     return true;
 }

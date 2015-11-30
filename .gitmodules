@@ -1,3 +1,6 @@
 [submodule "LMS"]
 	path = LMS
-	url = https://github.com/Phibedy/LMS
+	url = https://github.com/lms-org/LMS.git
+[submodule "external/libraries/googletest_lib"]
+	path = external/libraries/googletest_lib
+	url = https://github.com/syxolk/googletest_lib.git

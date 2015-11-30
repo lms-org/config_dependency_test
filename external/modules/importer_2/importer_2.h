@@ -11,7 +11,7 @@ public:
     bool deinitialize() override;
     bool cycle() override;
 private:
-    int *ptr;
+    lms::WriteDataChannel<int> ptr;
 };
 
 #endif /* IMPORTER_2_H */

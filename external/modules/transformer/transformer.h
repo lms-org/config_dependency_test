@@ -11,8 +11,8 @@ public:
     bool deinitialize() override;
     bool cycle() override;
 private:
-    const int *ptrIn;
-    int *ptrOut;
+    lms::ReadDataChannel<int> ptrIn;
+    lms::WriteDataChannel<int> ptrOut;
 };
 
 #endif /* TRANSFORMER_H */

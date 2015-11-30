@@ -4,6 +4,7 @@
 #include "lms/module.h"
 #include "lms/datamanager.h"
 #include "lms/extra/time.h"
+#include "lms/data_channel.h"
 
 class Reader : public lms::Module {
 public:
@@ -11,7 +12,7 @@ public:
     bool deinitialize() override;
     bool cycle() override;
 private:
-    const int *ptrIn;
+    lms::ReadDataChannel<int> ptrIn;
 };
 
 #endif /* READER_H */

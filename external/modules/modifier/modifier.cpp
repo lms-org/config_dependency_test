@@ -1,13 +1,9 @@
 #include "modifier.h"
 
-extern "C" {
-void* getInstance () {
-    return new Modifier();
-}
-}
+LMS_MODULE_INTERFACE(Modifier)
 
 bool Modifier::initialize() {
-    ptr = datamanager()->writeChannel<int>(this, "FUSION");
+    ptr = writeChannel<int>("FUSION");
 
     return true;
 }

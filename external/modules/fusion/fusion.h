@@ -11,9 +11,9 @@ public:
     bool deinitialize() override;
     bool cycle() override;
 private:
-    const int *ptrIn;
-    const int *ptrIn2;
-    int *ptrOut;
+    lms::ReadDataChannel<int> ptrIn;
+    lms::ReadDataChannel<int> ptrIn2;
+    lms::WriteDataChannel<int> ptrOut;
 };
 
 #endif /* FUSION_H */

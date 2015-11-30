@@ -1,13 +1,9 @@
 #include "reader.h"
 
-extern "C" {
-void* getInstance () {
-    return new Reader();
-}
-}
+LMS_MODULE_INTERFACE(Reader)
 
 bool Reader::initialize() {
-    ptrIn = datamanager()->readChannel<int>(this, "FUSION");
+    ptrIn = readChannel<int>("FUSION");
 
     return true;
 }

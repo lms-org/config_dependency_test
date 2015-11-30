@@ -1,15 +1,12 @@
 #include "fusion.h"
+#include "lms/definitions.h"
 
-extern "C" {
-void* getInstance () {
-    return new Fusion();
-}
-}
+LMS_MODULE_INTERFACE(Fusion)
 
 bool Fusion::initialize() {
-    ptrIn = datamanager()->readChannel<int>(this, "TRANSFORM_1");
-    ptrIn2 = datamanager()->readChannel<int>(this, "IMPORT_2");
-    ptrOut = datamanager()->writeChannel<int>(this, "FUSION");
+    ptrIn = readChannel<int>("TRANSFORM_1");
+    ptrIn2 = readChannel<int>("IMPORT_2");
+    ptrOut = writeChannel<int>("FUSION");
 
     return true;
 }
